@@ -1,2 +1,1 @@
-# orangehrm-new
-Selenium project
+# Selenium project
