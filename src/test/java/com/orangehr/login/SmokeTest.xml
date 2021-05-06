@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TestSuite" thread-count="3" parallel="Classes">
+    <test name="Test">
+        <classes>
+            <class name="com.orangehr.login.OrangeHR_LoginVerification" />
+            <class name="com.orangehr.login.OrangeHR_Login_TestNG_Priority_Ex" />
+            <class name="com.orangehr.login.OrangeHR_Login_TestNG_DataProvider_Ex" />
+            <!--<class name="pk_Orange_HRM.Delete_User_From_SearchList"/> -->
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

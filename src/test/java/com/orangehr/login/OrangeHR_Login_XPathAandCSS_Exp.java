@@ -1,0 +1,47 @@
+package com.orangehr.login;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+/**
+ * Created by pu00160 on 4/12/2021.
+ */
+public class OrangeHR_Login_XPathAandCSS_Exp {
+
+    WebDriver driver;
+
+    @Before
+    public  void LaunchBrowser(){
+        //Define Chrome Driver
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+    }
+
+    @After
+    public void CloseBrowser(){
+        //driver.close();  // will close only current browser
+        driver.quit(); //Will close all browser opened ny Selenium
+    }
+
+    @Test
+    public void Login_Successful(){
+
+        //driver.get("https://opensource-demo.orangehrmlive.com/index.php/auth/login");
+        driver.get("https://opensource-demo.orangehrmlive.com/index.php/dashboard");
+        try {
+            Thread.sleep(10*1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        driver.findElement(By.xpath("//input[@id=txtUserame")).sendKeys("Admin");
+        driver.findElement(By.xpath("//input[@id=txtPassword")).sendKeys("admin123");
+        driver.findElement(By.cssSelector("input[@id=btnLogin")).click();
+
+    }
+}
+
